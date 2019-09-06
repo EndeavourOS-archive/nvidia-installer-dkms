@@ -60,15 +60,15 @@ VENDOR_ID = "0x10de"
 
 PACKAGES = {
     "nouveau": ["xf86-video-nouveau", "mesa"],
-    "nvidia": ["nvidia-dkms", "libvdpau", "linux-headers"],
-    "nvidia-390xx": ["nvidia-390xx-dkms", "libvdpau", "linux-headers"],
+    "nvidia": ["nvidia-dkms", "libvdpau"],
+    "nvidia-390xx": ["nvidia-390xx-dkms", "libvdpau"],
     "bumblebee": ["bumblebee", "mesa", "xf86-video-intel",
                   "nvidia-dkms", "virtualgl", "nvidia-settings", "bbswitch-dkms"]}
 
 PACKAGES_LTS = {
     "nouveau": [],
-    "nvidia": ["linux-lts-headers"],
-    "nvidia-390xx": ["linux-lts-headers"],
+    "nvidia": [],
+    "nvidia-390xx": [],
     "bumblebee": []}
 
 PACKAGES_X86_64 = {
