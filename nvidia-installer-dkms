@@ -60,8 +60,8 @@ VENDOR_ID = "0x10de"
 
 PACKAGES = {
     "nouveau": ["xf86-video-nouveau", "mesa"],
-    "nvidia": ["nvidia-dkms", "libvdpau"],
-    "nvidia-390xx": ["nvidia-390xx-dkms", "libvdpau"],
+    "nvidia": ["nvidia-dkms", "libvdpau", "nvidia-settings"],
+    "nvidia-390xx": ["nvidia-390xx-dkms", "libvdpau", "nvidia-390xx-settings"],
     "bumblebee": ["bumblebee", "mesa", "xf86-video-intel",
                   "nvidia-dkms", "virtualgl", "nvidia-settings", "bbswitch-dkms"]}
 
@@ -131,6 +131,7 @@ def check_device():
                 for driver in DEVICES:
                     if product_id in DEVICES[driver]:
                         drivers.append(driver)
+                        return drivers
     return drivers
 
 
